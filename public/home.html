@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>Home Page</h1>
+		</header>
+		<main>
+			<div id="titleBar">
+				<button id="signup" class="titleBar">Sign Up</button>
+				<button id="signin" class="titleBar">Sign In</button>
+			</div>
+			<form id="registerForm">
+				<fieldset>
+					<label for="userName">
+						<h2>User-Name:</h2>
+						<input required id="userName_register" type="text"> 
+					</label> 
+					<label for="password1">
+						<h2>Enter Password:</h2>
+						<input required id="password1_register" type="password" maxlength="8">
+					</label>
+					<label for="password2">
+						<h2>Confirm Password:</h2>
+						<input required id="password2_register" type="password" maxlength="8">
+					</label>
+					<label>
+						<button type="submit">Submit</button>
+						<button type="reset">Reset</button>
+					</label>
+					<a id="Login" href="">Already have an account</a>
+				</fieldset>
+			</form>
+			<form id="loginForm">
+				<fieldset>
+					<label for="userName_login">
+						<h2>User-Name:</h2>
+						<input required id="userName" type="text"> 
+					</label> 
+					<label for="password1_login">
+						<h2>Enter Password:</h2>
+						<input required id="password1" type="password" maxlength="8">
+					</label>
+					<label>
+						<button type="submit">Submit</button>
+						<button type="reset">Reset</button>
+					</label>
+					<a id="Register" href="">Don't have an account</a>
+				</fieldset>
+			</form>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
