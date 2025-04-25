@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Login Page</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>Home Page</h1>
+		</header>
+		<main>		
+			<form id="loginForm" action="login" method="POST">
+				<fieldset>
+					<label for="userName_login">
+						<h2>User-Name:</h2>
+						<input required id="userName_login" type="text" name="userName_login"> 
+					</label> 
+					<label for="password_login">
+						<h2>Enter Password:</h2>
+						<input required id="password_login" type="password" maxlength="8" name="password_login">
+					</label>
+					<label>
+						<button type="submit">Submit</button>
+						<button type="reset">Reset</button>
+					</label>
+					<a href="/register">Don't have an account</a>
+				</fieldset>
+			</form>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

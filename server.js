@@ -25,6 +25,14 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, 'public', 'home.html'));
 });
 
+app.get('/login', (req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+app.get('/register', (req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'register.html'));
+});
+
 app.post('/register', (req ,res) => {
 	const {userName, password_1, password_2} = req.body;
 	

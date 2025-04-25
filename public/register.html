@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Register Page</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<h1>Home Page</h1>
+		</header>
+		<main>
+			<form id="registerForm" action="/register" method="POST">
+				<fieldset>
+					<label for="userName">
+						<h2>User-Name:</h2>
+						<input required id="userName_register" type="text" name="userName"> 
+					</label> 
+					<label for="password1">
+						<h2>Enter Password:</h2>
+						<input required id="password1_register" type="password" maxlength="8" name="password_1">
+					</label>
+					<label for="password2">
+						<h2>Confirm Password:</h2>
+						<input required id="password2_register" type="password" maxlength="8" name="password_2">
+					</label>
+					<label>
+						<button type="submit">Register</button>
+						<button type="reset">Reset</button>
+					</label>
+					<a href="/login">Already have an account</a>
+				</fieldset>
+			</form>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>

@@ -15,9 +15,3 @@ header {
 	gap: 1rem;
 	margin: 10px 30px;
 }
-
-#registerForm, #loginForm {
-	display: none;
-	opacity:0;
-	transition: all 1s ease;
-}
