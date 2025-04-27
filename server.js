@@ -17,7 +17,6 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 const app = express();
 const PORT = 3000;
-
 const usersPath = path.join (__dirname, 'users.json');
 
 // middleware
