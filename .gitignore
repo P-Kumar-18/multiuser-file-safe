@@ -1,5 +1,5 @@
 node_modules/
-
+users.json
 logs/
 *.log
 npm-debug.log*

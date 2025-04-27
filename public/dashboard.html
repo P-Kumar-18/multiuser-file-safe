@@ -5,7 +5,23 @@
 	</head>
 	<body>
 		<header><h1 id="dashboardHeader"></h1></header>
-		<main></main>
+		<main>
+			<div class="titleBar">
+				<button id="addFile">add file</button>
+				<button id="logout">Log Out</button>
+			</div>
+			<form id="addNewFiles" action="/fileUpload" method="POST" enctype="multipart/form-data">
+				<fieldset>
+					<div class="titleBar"><button id="closeForm">x</button></div>
+					<label for="newFile">
+						<h2>Add file here</h2>
+						<input id="newFile" type="file" name="newFile">
+					</label>
+					<button type="submit">Upload</button>
+				</fieldset>
+			</form>
+			<ul id="listOfFiles"></ul>
+		</main>
 		<script src="script.js"></script>
 	</body>
 </html>
