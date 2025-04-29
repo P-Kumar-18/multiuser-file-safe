@@ -2,31 +2,48 @@
 	<head>
 		<title>Login Page</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="/css/styles.css">
 	</head>
 	<body>
-		<header>
-			<h1>Home Page</h1>
-		</header>
-		<main>		
-			<form id="loginForm" action="login" method="POST">
-				<fieldset>
-					<label for="userName_login">
-						<h2>User-Name:</h2>
-						<input required id="userName_login" type="text" name="userName_login"> 
-					</label> 
-					<label for="password_login">
-						<h2>Enter Password:</h2>
-						<input required id="password_login" type="password" maxlength="8" name="password_login">
-					</label>
-					<label>
-						<button type="submit">Submit</button>
-						<button type="reset">Reset</button>
-					</label>
-					<a href="/register">Don't have an account</a>
-				</fieldset>
-			</form>
-		</main>
-		<script src="script.js"></script>
+		<div class="wrapper">
+			<header class="main-header">
+				<div class="logo">
+					<img id="logo" src="/views/logo-use.png">
+					<h1 class="header">Secure Multi-User File Storage</h1>
+				</div>
+				<div class="titleBar">
+					<a href="/register"><button id="signup" class="btn">Sign Up</button></a>
+					<a href="/login"><button id="signin" class="btn">Sign In</button></a>
+				</div>
+			</header>
+			<main>
+				<div class="auth-container">
+					<h2>Login</h2>
+					<form id="loginForm" action="login" method="POST">
+							<label for="userName_login">
+								<h3>User-Name:</h3>
+								<input required id="userName_login" type="text" name="userName_login"> 
+							</label> 
+							<label for="password_login">
+								<h3>Enter Password:</h3>
+								<input required id="password_login" type="password" maxlength="8" name="password_login">
+							</label>
+							<label>
+								<button type="submit">Submit</button>
+								<button type="reset">Reset</button>
+							</label>
+					</form>
+					<p class="switch-link"><a href="/register">Don't have an account?</a></p>
+				</div>
+			</main>
+			<footer>
+				<div class="footerLinks">
+					<a href="https://github.com/P-Kumar-18/multiuser-file-safe"><img class="footer-link" src="/views/github.png"></a>
+					<a href="https://www.linkedin.com/in/priyanshkumar18/"><img class="footer-link" src="/views/linkedin.png"></a>
+				</div>
+				<p><em>"Built with ❤️ using Node.js & Express"</em></p>
+			</footer>
+			<script src="/js/script.js"></script>
+		</div>
 	</body>
 </html>

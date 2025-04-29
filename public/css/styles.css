@@ -1,0 +1,179 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	font-size: 24px;
+	font-weight: 750;
+}
+
+.main-header {
+	background-color: #2C3E50;
+	color: #ECF0F1;
+}
+
+.logo {
+	display: flex;
+}
+
+#logo {
+	width: 8%;
+	height: 8%;
+}
+#svg {
+	width: 10%;
+	height: 12%;
+	margin-top: 1rem;
+}
+
+.header {
+	margin-left: 23.5%;
+	margin-top: 2rem;
+}
+
+#dashboardHeader {
+	margin-left: 32%;
+	margin-top: 2rem;
+}
+
+.titleBar {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1rem;
+	margin: 10px 0px;
+}
+
+.btn {
+	background-color: #3498DB;
+	color: #ECF0F1;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #2980B9;
+	transform: scale(1.1);
+	transition: transform 0.3s ease;
+}
+
+main{
+	flex: 1;
+	padding: 1rem;
+	background-color: #ECF0F1;
+	color: #2C3E50;
+	font-family: 'Roboto', sans-serif;
+	padding: 2rem;
+}
+
+.heading {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.container h2 {
+	font-size: 2rem;
+}
+
+.features {
+	margin-top: 2rem; 
+}
+
+.about, .feature {
+	margin-top: 1.5rem; 
+	margin-left: 3rem;
+} 
+
+#list-with-img, .formAndList {
+	display: flex;
+	flex-direction: rows;
+	gap: 50%;
+}
+
+#listOfFiles {
+	margin-left: 50px;
+	padding: 30px;
+	border: 2px solid;
+	border-radius: 15px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+	color: #2C3E50;
+	font-size: 25px;
+	text-align: center;
+}
+
+.addingFiles {
+	display: none;
+	opacity: 0;
+	transition: all 1s ease;
+}
+
+.auth-container, .addingFiles {
+	max-width: 400px;
+	margin: 65px auto;
+	padding: 30px;
+	background: #ffffff10;
+	border-radius: 15px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+	color: #2C3E50;
+	text-align: center;
+}
+
+.auth-container h2, .addingFiles h2 {
+	margin-bottom: 20px;
+}
+
+.auth-container form, .addingFiles form {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.auth-container label, .addingFiles label {
+	text-align: left;
+	font-weight: bold;
+}
+
+.auth-container input, .addingFiles input {
+	padding: 10px;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+}
+
+.auth-container button, .addingFiles button {
+	padding: 12px;
+	background: #1ABC9C;
+	color: white;
+	font-weight: bold;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.auth-container button:hover, .addingFiles button:hover {
+	background: #16a085;
+}
+
+.switch-link {
+	margin-top: 20px;
+	font-size: 0.9rem;
+}
+
+
+footer {
+	background-color: #2C3E50;
+	color: #ECF0F1;
+	padding: 30px 20px;
+	text-align: center;
+}
+
+.footer-link {
+	width: 3%;
+	height: 3%;
+}

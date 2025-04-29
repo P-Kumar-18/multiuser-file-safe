@@ -119,7 +119,7 @@ app.post('/register', (req ,res) => {
 	const users = loadingUsers();
 	
 	if (users.find(user => user.username === newUser.username)) {
-		return res.send(`Name ${newUser.username} is already taken.`);
+		return res.send(`Username: ${newUser.username} is already taken.`);
 	}
 	
 	users.push(newUser);
@@ -153,7 +153,8 @@ app.post('/login', (req, res) => {
 		console.log(`Logged in as: ${req.session.username}`)
 		res.redirect('/dashboard');
 	} else {
-		res.send(`Username and Password do not match.`);
+		res.redirect('/login');
+		alert(`Username or Password do not match.`);
 	}
 });
 

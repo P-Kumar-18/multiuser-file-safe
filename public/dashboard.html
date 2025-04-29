@@ -2,27 +2,43 @@
 	<head>
 		<title>Your Dashboard</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="/css/styles.css">
 	</head>
 	<body>
-		<header><h1 id="dashboardHeader"></h1></header>
-		<main>
-			<div class="titleBar">
-				<button id="addFile">add file</button>
-				<button id="logout">Log Out</button>
-			</div>
-			<form id="addNewFiles" action="/fileUpload" method="POST" enctype="multipart/form-data">
-				<fieldset>
-					<div class="titleBar"><button id="closeForm">x</button></div>
-					<label for="newFile">
-						<h2>Add file here</h2>
-						<input id="newFile" type="file" name="newFile">
-					</label>
-					<button type="submit">Upload</button>
-				</fieldset>
-			</form>
-			<ul id="listOfFiles"></ul>
-		</main>
-		<script src="script.js"></script>
+		<div class="wrapper">
+			<header class="main-header">
+				<div class="logo">
+					<img id="logo" src="/views/logo-use.png">
+					<h1 id="dashboardHeader" class="header"></h1>
+				</div>
+				<div class="titleBar">
+					<button id="addFile">Add File</button>
+					<button id="logout">Log Out</button>
+				</div>
+				</header>
+			<main>
+				<section class="formAndList">
+					<ul id="listOfFiles"></ul>
+					<div class="addingFiles">
+						<form id="addNewFiles" action="/fileUpload" method="POST" enctype="multipart/form-data">
+								<div class="titleBar"><button id="closeForm">x</button></div>
+								<label for="newFile">
+									<h2>Add file here</h2>
+									<input id="newFile" type="file" name="newFile">
+								</label>
+								<button type="submit">Upload</button>
+						</form>
+					</div>
+				</section>
+			</main>
+			<footer>
+				<div class="footerLinks">
+					<a href="https://github.com/P-Kumar-18/multiuser-file-safe"><img class="footer-link" src="../views/github.png"></a>
+					<a href="https://www.linkedin.com/in/priyanshkumar18/"><img class="footer-link" src="../views/linkedin.png"></a>
+				</div>
+				<p><em>"Built with ❤️ using Node.js & Express"</em></p>
+			</footer>
+			<script src="/js/script.js"></script>
+		</div>
 	</body>
 </html>

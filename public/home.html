@@ -2,18 +2,62 @@
 	<head>
 		<title>Home</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="/css/styles.css">
 	</head>
 	<body>
-		<header>
-			<h1>Home Page</h1>
-		</header>
-		<main>
-			<div class="titleBar">
-				<a href="/register"><button id="signup" class="titleBar">Sign Up</button></a>
-				<a href="/login"><button id="signin" class="titleBar">Sign In</button></a>
-			</div>
-		</main>
-		<script src="script.js"></script>
+		<div class="wrapper">
+			<header class="main-header">
+				<div class="logo">
+					<img id="logo" src="../views/logo-use.png">
+					<h1 class="header">Secure Multi-User File Storage</h1>
+				</div>
+				<div class="titleBar">
+					<a href="/register"><button id="signup" class="btn">Sign Up</button></a>
+					<a href="/login"><button id="signin" class="btn">Sign In</button></a>
+				</div>
+			</header>
+			<main>
+				<section class="container">
+					<h2 class="heading">Welcome to Secure File Storage</h2>
+					<p class="heading"><em>Your private cloud storage, for all your files and documents.</em></p>
+					<div class="overview">
+						<div class="about">
+							<span>Private, protected storage for your important files.</span>
+						</div>
+						<div class="about">
+							<span>Upload, organize, and manage your data safely — built with Node.js and Express for maximum security.</span>
+						</div>
+					</div>
+					<div class="features">
+						<h2 class="heading">Some features of Secure File Storage</h2>
+						<div id="list-with-img">
+							<div id="list">
+								<div class="feature">
+									<span>🔒 Encrypted Storage</span>
+								</div>
+								<div class="feature">
+									<span>🗂️ Private Folders</span>
+								</div>
+								<div class="feature">
+									<span>⚡ Fast Uploads</span>
+								</div>
+								<div class="feature">
+									<span>🌍 Access Anywhere</span>
+								</div>
+							</div>
+							<img id="svg" src="../views/PrivateFiles.svg">
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer>
+				<div class="footerLinks">
+					<a href="https://github.com/P-Kumar-18/multiuser-file-safe"><img class="footer-link" src="../views/github.png"></a>
+					<a href="https://www.linkedin.com/in/priyanshkumar18/"><img class="footer-link" src="../views/linkedin.png"></a>
+				</div>
+				<p><em>"Built with ❤️ using Node.js & Express"</em></p>
+			</footer>
+			<script src="/js/script.js"></script>
+		</div>
 	</body>
 </html>

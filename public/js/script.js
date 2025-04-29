@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const header = document.querySelector('#dashboardHeader');
 		const addFile = document.querySelector('#addFile');
 		const closeForm = document.querySelector('#closeForm');
-		const addFileForm = document.querySelector('#addNewFiles');
+		const addFileForm = document.querySelector('.addingFiles');
 		const logoutBtn = document.querySelector('#logout');
 		const listOfFiles = document.querySelector('#listOfFiles');
 		
