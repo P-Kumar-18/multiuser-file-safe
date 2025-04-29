@@ -15,6 +15,7 @@ const storage = multer.diskStorage({
 	}
 });
 const upload = multer({storage: storage});
+const bcrypt = require('bcrypt');
 const app = express();
 const PORT = 3000;
 const usersPath = path.join (__dirname, 'users.json');
@@ -102,16 +103,17 @@ app.get('/userFiles', (req, res) => {
 });
 
 // post 
-app.post('/register', (req ,res) => {
+app.post('/register', async (req ,res) => {
 	const {userName, password_1, password_2} = req.body;
 	
 	if (password_1 !== password_2){
 		return res.send(`Passwords do not match.`);
 	}
 	
+	const hashedPassword = await bcrypt.hash(password_1, 10);
 	const newUser = {
 		username: userName,
-		password: password_1
+		password: hashedPassword
 	};
 	
 	makingUsers();
@@ -133,29 +135,28 @@ app.post('/register', (req ,res) => {
 	res.redirect('/');
 });
 
-app.post('/login', (req, res) => {
-	const {userName_login, password_login} = req.body;
-	const userLogin = {
-		username: userName_login,
-		password: password_login
-	};	
+app.post('/login', async (req, res) => {
+	const {userName_login, password_login} = req.body;	
 	
 	makingUsers();
 	
 	const users = loadingUsers();
 	
 	const matchedUser = users.find(user => 
-		user.username === userLogin.username && user.password === userLogin.password
+		user.username === userName_login
 	);
 	
 	if (matchedUser) {
-		req.session.username = userLogin.username;
-		console.log(`Logged in as: ${req.session.username}`)
-		res.redirect('/dashboard');
-	} else {
-		res.redirect('/login');
-		alert(`Username or Password do not match.`);
+		const passwordMatch = await bcrypt.compare(password_login, matchedUser.password);
+		
+		if(passwordMatch) {
+			req.session.username = matchedUser.username;
+			console.log(`Logged in as: ${req.session.username}`)
+			return res.redirect('/dashboard');
+		}
 	}
+	
+	res.redirect('/login?error=1');
 });
 
 app.post('/fileUpload', (req, res, next) => {

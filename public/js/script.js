@@ -1,7 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
 	
-	//dashboard
+	//login 
+	if(window.location.pathname === '/login') {
+		const params = new URLSearchParams(window.location.search);
+		const error = document.querySelector('#error');
+		
+		if(params.get('error') === '1') {
+			error.textContent = `Username or Password do not match.`;
+		}
+	}
 	
+	//dashboard
 	if(window.location.pathname === '/dashboard') {
 		const header = document.querySelector('#dashboardHeader');
 		const addFile = document.querySelector('#addFile');
